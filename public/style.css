@@ -1,0 +1,153 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+button {
+    width: 195px;
+    height: 50px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    align-content: start;
+    filter: brightness(0.15);
+}
+
+.backgroundImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#root {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    color: white;
+    font-size: 5em;
+    margin: 0;
+    padding: 0;
+
+}
+
+#searchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+
+#castInput {
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    min-width: 400px
+}
+
+#castInput input {
+    border: none;
+    width: 100%;
+}
+
+#genreInput {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+
+
+}
+
+#genreInput select {
+
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    border: none;
+    text-align: center;
+}
+
+#releaseDate {
+    background-color: white;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#releaseDateLabel {
+    margin: 5px;
+}
+
+#dateInput {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "labelFrom dateFrom"
+        "labelTo dateTo";
+}
+
+#labelFrom {
+    grid-area: labelFrom;
+}
+
+#dateFrom {
+    grid-area: dateFrom;
+}
+
+#labelTo {
+    grid-area: labelTo;
+}
+
+#dateTo {
+    grid-area: dateTo;
+}
+
+#moviesDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movieElement {
+    max-width: min-content;
+    margin: 10px;
+    color: white;
+}
+
+.genresh3,
+.genres {
+    margin: 0
+}

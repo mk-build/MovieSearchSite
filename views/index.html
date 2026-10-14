@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="client.js" defer></script>
+</head>
+
+<body>
+    <div id="background"></div>
+    <div id="root">
+        <h1>
+            Movie Discovery
+        </h1>
+        <div id="searchDiv">
+            <form action="/search" id="searchForm">
+                <div id="castInput">
+                    <label for="cast">Cast:</label>
+                    <input type="text" name="with_cast" id="cast">
+                </div>
+                <div id="genreInput">
+                    <label for="genre">Genre:</label>
+                    <select name="with_genres" id="genre" multiple></select>
+                </div>
+                <div id="releaseDate">
+
+                    <label for="dateFrom" id="releaseDateLabel">Release Date:</label>
+
+                    <div id="dateInput">
+                        <label for="dateFrom" id="labelFrom">From:</label>
+                        <label for="dateTo" id="labelTo">To:</label>
+                        <input type="date" name="primary_release_date.gte" id="dateFrom">
+                        <input type="date" name="primary_release_date.lte" id="dateTo">
+                    </div>
+
+                </div>
+                <div id="searchReset">
+                    <button type="submit" id="searchButton">Search</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+        <div id="moviesDiv"></div>
+        <button type="button" id="loadMore">Load More...</button>
+    </div>
+</body>
+
+</html>
